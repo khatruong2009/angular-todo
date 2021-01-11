@@ -11,6 +11,8 @@ export class TodosComponent implements OnInit {
   //uses the Todo model to make a new array that has to follow the rules of the model
   todos:Todo[];
 
+  inputTodo:string = "";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -42,6 +44,14 @@ export class TodosComponent implements OnInit {
   removeTodo (id:number) {
     //filters and returns todos which id doesn't match the one that was clicked
     this.todos = this.todos.filter((v, i) => i !== id);
+  }
+
+  //add todos
+  addTodo() {
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false
+    })
   }
 
 }

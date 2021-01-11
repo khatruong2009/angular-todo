@@ -1,4 +1,9 @@
 <div class="todos">
+  <form (submit)="addTodo()">
+    <input class="todo-input" type="text" placeholder="Todo" [(ngModel)]="inputTodo">
+    <br>
+    <input type="submit" value="Add Todo" name="Add Todo" id="" class="todo-submit">
+  </form>
   <!-- loops through array of todos to display all items -->
   <!-- adds the class done(line strikethrough) when todo.completed is true -->
   <div class="todo {{(todo.completed) ? 'done' : ''}}" *ngFor="let todo of todos; let i = index;" >
