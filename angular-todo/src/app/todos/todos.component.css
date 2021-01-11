@@ -1,5 +1,5 @@
 .todo:nth-child(even) {
-  background-color: lightblue;
+  background-color:rgb(248, 217, 221);
 }
 
 .todo {

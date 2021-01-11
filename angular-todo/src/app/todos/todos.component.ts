@@ -28,7 +28,7 @@ export class TodosComponent implements OnInit {
   }
 
   //add functionality so that when clicked, toggles a todos completed variable
-  toggleDone (id) {
+  toggleDone (id:number) {
     this.todos.map((v, i) => {
       //if the todo clicked matches the id of a todo, toggle the completed on the todo
       if (i == id) v.completed = !v.completed;
@@ -36,6 +36,12 @@ export class TodosComponent implements OnInit {
 
       return v;
     })
+  }
+
+  //add remove button
+  removeTodo (id:number) {
+    //filters and returns todos which id doesn't match the one that was clicked
+    this.todos = this.todos.filter((v, i) => i !== id);
   }
 
 }
