@@ -1,0 +1,25 @@
+.todo:nth-child(even) {
+  background-color: lightblue;
+}
+
+.todo {
+  display: flex;
+  margin-top: 10px;
+  width: 60%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.todo div {
+  padding: 0px 15px;
+}
+
+.remove {
+  border: black 1px solid;
+  background-color: lightgrey;
+  /* margin-right: 20%; */
+}
+
+.done .content {
+  text-decoration: line-through;
+}
