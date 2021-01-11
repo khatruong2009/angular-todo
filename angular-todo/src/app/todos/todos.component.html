@@ -1,4 +1,6 @@
 <div class="todos">
+  <!-- loops through array of todos to display all items -->
+  <!-- adds the class done(line strikethrough) when todo.completed is true -->
   <div class="todo {{(todo.completed) ? 'done' : ''}}" *ngFor="let todo of todos; let i = index;" >
     <div class="id">{{i}}</div>
     <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
